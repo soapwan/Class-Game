@@ -14,6 +14,8 @@ public class PlayerScript : MonoBehaviour
     
     public GameObject Wall;
     
+    public GameObject Walle;
+    
     public GameObject Hazard;
     //TextMeshPro is a component that draws text on the screen.
     //We use this one to show our score.
@@ -95,6 +97,8 @@ public class PlayerScript : MonoBehaviour
             UpdateScore();
             // Update wall position
             Wall.transform.position = new Vector3(UnityEngine.Random.Range(-8.5f, 8.5f), UnityEngine.Random.Range(-4.5f, 4.5f), 0);
+            
+            Walle.transform.position = new Vector3(UnityEngine.Random.Range(-8.5f, 8.5f), UnityEngine.Random.Range(-4.5f, 4.5f), 0);
             
             Hazard.GetComponent<HazardFollow>().Speed += 0.005f;
             
